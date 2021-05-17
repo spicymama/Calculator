@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OmA-Kk-Y0d">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="Stack View standard spacing" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Calculator View Controller-->
+        <scene sceneID="NZe-fo-Dfq">
+            <objects>
+                <viewController id="OmA-Kk-Y0d" customClass="CalculatorViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xcP-08-2p7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iE6-7V-rg2" customClass="NumberTextField" customModule="Calculator" customModuleProvider="target">
+                                <rect key="frame" x="20.5" y="108" width="373" height="75"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="75" id="E0a-0h-DZH"/>
+                                </constraints>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="32" translatesAutoresizingMaskIntoConstraints="NO" id="tQB-lg-EAF">
+                                <rect key="frame" x="45" y="238" width="324" height="503"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RA7-VD-uAg">
+                                        <rect key="frame" x="0.0" y="0.0" width="324" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p3A-M2-OpH" customClass="GrayButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="Q49-pV-lEt"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="lPg-K2-qrb"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="v4C-Pu-Woo"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="AC"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="ckD-hT-Vwl"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="17" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5bY-tU-riF" customClass="GrayButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="83" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="7lR-zV-StJ"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="BNX-C5-s9v"/>
+                                                    <constraint firstAttribute="height" constant="75" id="meE-eU-cyy"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="+/-"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="YjK-XJ-NAu"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="18" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kGP-vP-AKm" customClass="GrayButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="166" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="kGP-vP-AKm" secondAttribute="height" multiplier="1:1" id="Rcs-6P-637"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="aST-bg-FRd"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="nBH-iN-8cF"/>
+                                                    <constraint firstAttribute="height" constant="75" id="uaq-Tg-1jP"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="%"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="fk6-Uf-LF7"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BL9-8p-wvw" customClass="OperatorButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="249" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="b39-du-E5L"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="bls-Lf-Ayc"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="csM-i6-ES3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                                <state key="normal" title="÷"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="TDx-FB-cDl"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oXx-DC-jhE">
+                                        <rect key="frame" x="0.0" y="107" width="324" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDf-pQ-twz" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="1xl-fn-zrr"/>
+                                                    <constraint firstAttribute="height" constant="75" id="9Fw-dg-ecM"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="UDE-WL-Buu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="7"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="aR6-c0-EfD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G7x-hq-enl" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="83" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="39x-tY-d40"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="XIP-nJ-h4d"/>
+                                                    <constraint firstAttribute="height" constant="75" id="hht-Cs-hO3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="8"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="s08-MV-W2e"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oBl-rk-VTw" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="166" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="oBl-rk-VTw" secondAttribute="height" multiplier="1:1" id="40L-Si-kj6"/>
+                                                    <constraint firstAttribute="height" constant="75" id="PQp-eg-nuF"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="jjS-zd-has"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="m2u-Ec-ige"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="9"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="99m-7A-N8l"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eV3-WC-Jpn" customClass="OperatorButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="249" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="CMT-g3-CYw"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="iyD-by-Zkz"/>
+                                                    <constraint firstAttribute="height" constant="75" id="yKk-8x-6JU"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="x"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="jJZ-ym-jXA"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4bT-N9-KgO">
+                                        <rect key="frame" x="0.0" y="214" width="324" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MFU-Cs-qyt" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="RrR-5U-Rzf"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="VxE-Ef-00s"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="X8R-Qt-b9n"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="4"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="ScI-lU-glW"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1s3-bD-ddb" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="83" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="7l7-i9-bo8"/>
+                                                    <constraint firstAttribute="height" constant="75" id="FMf-53-brg"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="PMU-zS-Ghu"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="5"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="zcw-Jr-pEf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riU-JH-oAB" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="166" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="0Sg-2J-J1w"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="CBF-9O-eJB"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="TRn-om-etu"/>
+                                                    <constraint firstAttribute="width" secondItem="riU-JH-oAB" secondAttribute="height" multiplier="1:1" id="xov-I9-rV3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="6"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="LGw-Kf-sRf"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iOr-S4-OOV" customClass="OperatorButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="249" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="4Xp-ec-vSc"/>
+                                                    <constraint firstAttribute="height" constant="75" id="FR9-7N-PxV"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="VzZ-7l-TBB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="-"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="DzR-88-6Py"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="RD6-Mj-fjh">
+                                        <rect key="frame" x="0.0" y="321" width="324" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gOT-vg-b95" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="HK0-36-nu2"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="iMP-bx-wRi"/>
+                                                    <constraint firstAttribute="height" constant="75" id="rOT-2V-K4y"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="1"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="JJU-JR-v4Z"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="do5-Sc-YZd" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="83" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="Bvy-0z-28s"/>
+                                                    <constraint firstAttribute="height" constant="75" id="hP1-c7-28x"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="vk5-aW-wLS"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="2"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="Iv8-pX-Clc"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kmc-QB-1Mi" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="166" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="38Y-18-Yqt"/>
+                                                    <constraint firstAttribute="height" constant="75" id="5wW-E6-ouS"/>
+                                                    <constraint firstAttribute="width" secondItem="Kmc-QB-1Mi" secondAttribute="height" multiplier="1:1" id="vBl-kI-RUU"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="veb-pj-CjZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="3"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="Efz-1O-FUH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E0m-bi-G1e" customClass="OperatorButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="249" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="75" id="dNB-3R-Aya"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="vlG-d0-tAf"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="44" id="zEy-In-GnG"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="+"/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="DZN-7u-xG1"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="AXe-fx-ksi">
+                                        <rect key="frame" x="0.0" y="428" width="324" height="75"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G57-2X-zhW" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="158" id="Qkq-Kf-t3x"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="0"/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="8eO-Tm-Mtx"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ug-HQ-icX" customClass="NumberButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="166" y="0.0" width="75" height="75"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="."/>
+                                                <connections>
+                                                    <action selector="numbers:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="r1E-Py-HVd"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="16" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pns-Rj-GE4" customClass="OperatorButtons" customModule="Calculator" customModuleProvider="target">
+                                                <rect key="frame" x="249" y="0.0" width="75" height="75"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="75" id="oJe-7d-nzj"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="="/>
+                                                <connections>
+                                                    <action selector="buttons:" destination="OmA-Kk-Y0d" eventType="touchUpInside" id="5oj-lF-931"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="75" id="9Oa-Lj-J4F"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="V2c-n6-1f3"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iE6-7V-rg2" firstAttribute="centerX" secondItem="V2c-n6-1f3" secondAttribute="centerX" id="4jk-ll-LgR"/>
+                            <constraint firstItem="tQB-lg-EAF" firstAttribute="top" secondItem="iE6-7V-rg2" secondAttribute="bottom" constant="55" id="Dvv-Jh-Mn2"/>
+                            <constraint firstItem="tQB-lg-EAF" firstAttribute="centerX" secondItem="V2c-n6-1f3" secondAttribute="centerX" id="LUZ-1M-3R2"/>
+                            <constraint firstItem="iE6-7V-rg2" firstAttribute="width" secondItem="xcP-08-2p7" secondAttribute="width" multiplier="0.9" id="PMk-nE-6BR"/>
+                            <constraint firstItem="iE6-7V-rg2" firstAttribute="top" secondItem="V2c-n6-1f3" secondAttribute="top" constant="64" id="XUu-RH-Lxr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="iE6-7V-rg2" id="fLZ-ZE-m0Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0t3-VC-Wai" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="67.633928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
